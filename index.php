@@ -39,6 +39,7 @@ if ($result->num_rows > 0) {
 		$lat = $jsonarr['lat'] = (string)$coords[1];
 		$lon = $jsonarr['lon'] = (string)$coords[2];
 	} else {
+		header('HTTP/1.0 404 Not found');
 		exit($coords[0]);
 	}
 
