@@ -36,8 +36,8 @@ if ($result->num_rows > 0) {
 } else {
 	$coords = getCoordinates($address);
 	if (!$coords[0]) {
-		$lat = $jsonarr['lat'] = $coords[1];
-		$lon = $jsonarr['lon'] = $coords[2];
+		$lat = $jsonarr['lat'] = (string)$coords[1];
+		$lon = $jsonarr['lon'] = (string)$coords[2];
 	} else {
 		exit($coords[0]);
 	}
