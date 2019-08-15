@@ -62,6 +62,8 @@ function getCoordinates($address){
 	$response = file_get_contents($cordurl);
 	$json = json_decode($response,true);
 	$error = false;
+	$lat = 'NULL';
+	$lng = 'NULL';
 	
 	if (isset($json['results'][0])) {
 		$lat = $json['results'][0]['geometry']['location']['lat'];
